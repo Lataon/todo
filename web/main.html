@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="resources/js/scripts.js"></script>
+    <script src="resources/js/entities.js"></script>
+    <script src="resources/js/creatingContentFuncs.js"></script>
+    <script src="resources/js/generatingFuncs.js"></script>
+    <script src="resources/js/init.js"></script>
+
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="resources/bootstrap/css/custom.css"/>
+</head>
+
+<body onload="start()" class="bodyBackMain">
+
+<header class="header">
+    <span class="headerLogo" id="login"></span>
+    <div class="header-right">
+        <form action="logout" name="logout" method="post">
+            <input name="error" type="hidden" value="">
+            <a class="active" href="javascript:logoutFun()">Logout</a>
+        </form>
+    </div>
+</header>
+
+<div id = "error-block" class="alert-danger">
+    <!--/output errors-->
+</div>
+<!--//main content-->
+<main id ="main">
+    <div class="container containerMainContent">
+
+        <!--    // upper buttons-->
+        <div>
+            <ul id="upperButtons" class="nav menu">
+            </ul>
+        </div>
+
+        <!--    //Section title-->
+        <h3 class="titleStyle" id="sectionTitle"></h3>
+
+        <!--    error message-->
+        <div id="emptyTasksMsg">No tasks yet</div>
+
+        <form name="tasks" method="POST">
+            <div id="taskTable">
+                <input type="hidden" name="filter">
+                <input type="hidden" name="operation">
+
+                <!--    //table-->
+                <table class="table table-bordered" style="background-color: white">
+                    <thead>
+                    <tr id="tableHead">
+                    </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+
+                <!--    //lower buttons-->
+                <ul id="lowerButtons" class="nav operationButtons"></ul>
+            </div>
+            <!--    //add task-->
+            <div class="form-control" id="addTask">
+                <label for="addText">Text</label>
+                <textarea class="form-control" name="text" id="addText"></textarea>
+                <div id="addDate">
+                    <label for="date">Date</label>
+                    <input class="form-control" type="date" name="date" value="">
+                </div>
+                <ul class="nav operationButtons addTaskButtonsStile">
+                    <li>
+                        <a href="javascript:sendAddTaskForm()">Add task</a>
+                    </li>
+                    <li>
+                        <a href="javascript:cancelAdding()">Back</a>
+                    </li>
+                </ul>
+            </div>
+        </form>
+
+        <div id="upload">
+            <form id="upload-form" name="upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="fileToUpload" id="addFileInputId" class="addFileInputStyle">
+                <input type="hidden" name="filter" value="">
+                <ul class="nav uploadButtonsStyle">
+                    <li>
+                        <a id="uploadButton" class="btn btn-outline-secondary">Upload file</a>
+                    </li>
+                    <li>
+                        <a href="javascript:cancelUpload()" class="btn btn-outline-secondary">Cancel upload</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <p id="errorText" style="color:red;"></p>
+
+    </div>
+</main>
+
+<!--//footer-->
+<footer class="fixed-bottom"> Developed by Aliaksandr Bahlikau and Aleksey Serikov</footer>
+</body>
+</html>

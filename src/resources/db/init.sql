@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS TASKS;
+DROP TABLE IF EXISTS USERS;
+
+CREATE TABLE USERS
+(
+    userId INT NOT NULL AUTO_INCREMENT,
+    userName VARCHAR(8) NOT NULL UNIQUE,
+    password VARCHAR(8),
+    PRIMARY KEY (userId)
+);
+ALTER TABLE USERS AUTO_INCREMENT = 100;
+
+CREATE TABLE TASKS
+(
+    taskId INT NOT NULL AUTO_INCREMENT,
+    userId INT NOT NULL,
+    description TEXT NOT NULL,
+    dateTask DATE NOT NULL,
+    isFixed BOOLEAN DEFAULT false,
+    isRemoved BOOLEAN DEFAULT false,
+    fileName varchar(200),
+    file mediumblob,
+    PRIMARY KEY (taskId),
+    FOREIGN KEY (userId) REFERENCES USERS(userId)
+);
+ALTER TABLE TASKS AUTO_INCREMENT = 100;

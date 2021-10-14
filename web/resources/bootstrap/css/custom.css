@@ -1,0 +1,247 @@
+.projTitle {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.errorMsgStyle {
+    color: red;
+    text-align: center;
+}
+
+.bodyBack {
+    background: #b6b9bd;
+    background: linear-gradient(to top, #b3b3bf, #ffffff);
+}
+
+.titleStyle {
+    padding-bottom: 10px;
+}
+
+.bodyBackMain {
+    background: #b6b9bd;
+    background: linear-gradient(to right, #b3b3bf, #ffffff);
+}
+
+/*login ang reg stile*/
+
+.title {
+    color: #007bff;
+}
+
+.mgTp {
+    margin-top: 10%;
+}
+
+.topBtn {
+    margin-top: 15px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #007bff !important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #007bff !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #007bff !important;
+}
+
+
+/*header stile*/
+
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    /*background-color: #f1f1f1;*/
+    background-color: #a7a7a7;
+    padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.headerLogo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+    /*background-color: #ddd;*/
+    background-color: #999696;
+    color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+}
+
+/*reg log */
+.regLogWidth {
+    margin-top: 120px;
+    width: 700px;
+}
+
+.containerMainContent {
+    width: 70%;
+}
+
+
+/* layout main menu */
+
+.menu {
+    clear: both;
+    float: left;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+ul.menu {
+    display: table;
+    margin-left: auto;
+    margin-right: 0em;
+}
+
+/* horizontal menu layout */
+.menu li {
+    display: inline-block;
+    border-radius: 4px;
+    margin-right: 25px;
+    background-color: #496692;
+}
+
+/* link style on-mouse-over */
+.menu li a:hover {
+    background: linear-gradient(#627da7, #26416b) #627da7;
+}
+
+
+/* link style */
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #5b759c #000 #222238;
+    border-radius: 4px;
+    background: linear-gradient(#496692, #26416b) #496692;
+    transition: 0.2s;
+}
+
+
+/*operationButtons*/
+
+/* layout main menu */
+.operationButtons {
+    clear: both;
+    float: left;
+    margin-top: 10px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+ul.operationButtons {
+    display: table;
+    margin-left: auto;
+    margin-right: 0em;
+}
+
+/* horizontal menu layout */
+.operationButtons li {
+    text-align: center;
+    width: 120px;
+    display: inline-block;
+    border-radius: 4px;
+    margin-right: 30px;
+    background-color: rgba(90, 93, 94, 0.75);
+}
+
+/* link style on-mouse-over */
+.operationButtons li a:hover {
+    background: linear-gradient(#b1adad, #3e444c) #949698;
+}
+
+/* link style */
+.operationButtons li a {
+    width: 130px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #969292 #000 #464648;
+    border-radius: 4px;
+    background: linear-gradient(#969292, #3e444c) #93969a;
+    transition: 0.2s;
+}
+
+table ul{
+    display: inline-block;
+    margin-left:-33px;
+}
+
+table li{
+    display: inline-block;
+    text-decoration: none;
+    margin-left:5px;
+}
+
+.addTaskButtonsStile {
+    margin-top: 25px;
+}
+
+.addFileInputStyle{
+    /*margin-bottom: 50px;*/
+    margin-bottom: 20px;
+}
+
+.uploadButtonsStyle li {
+    margin-right: 7px;
+    margin-bottom: 30px;
+}

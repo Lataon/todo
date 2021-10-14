@@ -1,0 +1,2 @@
+docker run -d --name mysql-todo -e MYSQL_ROOT_PASSWORD=72305 -e MYSQL_DATABASE=web1 -e TZ=Europe/Minsk -p 32769:3306 mysql:5.5
+docker run -d --rm -p 8888:8080 -v /media/alex/Work/PROJECTS/ToDo/out/artifacts:/usr/local/tomcat/webapps tomcat:9.0
